@@ -5,13 +5,13 @@ Linux](https://www.alpinelinux.org/) base image.
 
 ## Server
 
-There are two Dockerfiles. One for running PyPI, and one for configuring user
-accounts. The PyPI container uses a read/write Docker volume for the Python
-packages (called `pypi`). This allows your packages to be persisted and shared
-across container instances. Authentication settings (user accounts) are kept in
-a separate volume (called `pypi-auth`) which is mounted read-only by the PyPI
-container. The purpose of the [`auth` container](auth) is to provide a
-container for configuring user accounts.
+There are really two Dockerfiles. One for running PyPI, and one for
+authentication configuration. The PyPI container uses a read/write Docker
+volume for the Python packages (called `pypi`). This allows your packages to be
+persisted and shared across container instances. Authentication settings (user
+accounts) are kept in a separate volume (called `pypi-auth`) which is mounted
+read-only by the PyPI container. The purpose of the [`auth` container](auth) is
+to set up a `pypi-auth` volume for use with [this container](Dockerfile).
 
 ### Authentication
 
