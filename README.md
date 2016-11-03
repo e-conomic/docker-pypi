@@ -18,15 +18,13 @@ container for configuring user accounts.
 PyPI uses Apache-style `htpasswd` files for authentication. These can be
 generated using the [`htpasswd`
 utility](https://httpd.apache.org/docs/current/programs/htpasswd.html) found in
-your local Apache httpd package.
+your local Apache httpd package. If you don't want to bother with installing
+the Apache utilities, the [`auth` container](auth) gets them inside the box. To
+use this option, you can let `auth/htpasswd` be an empty file and type `make -C
+auth interact` (from here) to drop into a shell with `htpasswd` installed.
 
 The [Dockerfile](Dockerfile) installs
 [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) in the Docker container. Use it.
-
-You should save the file as `auth/htpasswd`. If you don't want to install the
-Apache utilities on your machine, the `auth` container has them installed. You
-can let `auth/htpasswd` be an empty file and use `make -C auth interact` to
-drop into a shell with `htpasswd` installed.
 
 To _create_ an `auth/htpasswd` file,
 
