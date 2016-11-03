@@ -23,8 +23,9 @@ the Apache utilities, the [`auth` container](auth) gets them inside the box. To
 use this option, you can let `auth/htpasswd` be an empty file and type `make -C
 auth interact` (from here) to drop into a shell with `htpasswd` installed.
 
-The [Dockerfile](Dockerfile) installs
-[bcrypt](https://en.wikipedia.org/wiki/Bcrypt) in the Docker container. Use it.
+(The [Dockerfile](Dockerfile) installs
+[bcrypt](https://en.wikipedia.org/wiki/Bcrypt) in the PyPI container. Let's use
+it.)
 
 To _create_ an `auth/htpasswd` file,
 
