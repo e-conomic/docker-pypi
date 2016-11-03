@@ -13,10 +13,10 @@ RUN apk add --no-cache g++ python3-dev libffi-dev && \
 
 EXPOSE 80
 
-# PyPI volume
+# PyPI volume, should be mounted read-write.
 VOLUME ["/srv/pypi"]
 
-# PyPI auth volume
+# PyPI auth volume, should be mounted read-only.
 VOLUME ["/root/auth"]
 
 CMD ["pypi-server", \
