@@ -1,10 +1,13 @@
 FROM alpine:3.4
 MAINTAINER osh@e-conomic.com
 
-RUN mkdir /root/auth
+ADD auth-interact /root/auth-interact
+
+RUN apk add --no-cache apache2-utils bash && \
+  mkdir /root/auth
 
 VOLUME ["/root/auth"]
 
 ADD htpasswd /root/auth
 
-CMD [ "/bin/ash", "-c", "exit" ]
+ENTRYPOINT [ "/usr/bin/env", "sh", "-c", "exit" ]

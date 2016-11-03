@@ -21,5 +21,5 @@ VOLUME ["/root/auth"]
 
 CMD ["pypi-server", \
   "--port", "80", \
-  "--passwords", "/root/auth/.htpasswd", \
+  "--passwords", "/root/auth/htpasswd", \
   "/srv/pypi"]

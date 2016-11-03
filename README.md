@@ -23,8 +23,10 @@ your local Apache httpd package.
 The [Dockerfile](Dockerfile) installs
 [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) in the Docker container. Use it.
 
-`auth/htpasswd` is already ignored by the given [`.gitignore`](.gitignore)
-file, so we can work with that below.
+You should save the file as `auth/htpasswd`. If you don't want to install the
+Apache utilities on your machine, the `auth` container has them installed. You
+can let `auth/htpasswd` be an empty file and use `make -C auth interact` to
+drop into a shell with `htpasswd` installed.
 
 To _create_ an `auth/htpasswd` file,
 

@@ -12,7 +12,16 @@ run: build
 	  --rm \
 	  --name pypi-auth \
 	  --hostname e-conomic-pypi-auth \
-	  --volume pypi-auth:/root:rw \
+	  --volume pypi-auth:/root/auth:rw \
+	  e-conomic/docker-pypi-auth
+
+interact: build
+	docker run -i \
+	  --rm \
+	  --name pypi-auth \
+	  --hostname e-conomic-pypi-auth \
+	  --volume pypi-auth:/root/auth:rw \
+		--entrypoint="/root/auth-interact" \
 	  e-conomic/docker-pypi-auth
 
 clean:
