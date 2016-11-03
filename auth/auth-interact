@@ -5,8 +5,9 @@ cd /root
 shell=bash
 
 cat <<EOF
-***********************************
-Welcome to the PyPI auth container!
+***********************************************************************
+*                 Welcome to the PyPI auth container!                 *
+***********************************************************************
 You can use htpasswd to modify /root/auth/htpasswd.
 /root/auth will be mounted readonly in the PyPI container.
 
@@ -19,6 +20,7 @@ To add a user to an existing auth/htpasswd,
 ~$ htpasswd auth/htpasswd <username>
 
 This is $shell, and you are in $(pwd).
+************************************************************************
 EOF
 
 $shell
