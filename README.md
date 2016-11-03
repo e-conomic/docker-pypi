@@ -10,7 +10,7 @@ accounts. The PyPI container uses a read/write Docker volume for the Python
 packages (called `pypi`). This allows your packages to be persisted and shared
 across container instances. Authentication settings (user accounts) are kept in
 a separate volume (called `pypi-auth`) which is mounted read-only by the PyPI
-container. The purpose of [`auth/Dockerfile`](auth/Dockerfile) is to provide a
+container. The purpose of the [`auth` container](auth) is to provide a
 container for configuring user accounts.
 
 ### Authentication
