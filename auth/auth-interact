@@ -2,6 +2,8 @@
 
 cd /root
 
+shell=bash
+
 cat <<EOF
 ***********************************
 Welcome to the PyPI auth container!
@@ -16,7 +18,7 @@ To add a user to an existing auth/htpasswd,
 
 ~$ htpasswd auth/htpasswd <username>
 
-This is bash, and you are in $(pwd).
+This is $shell, and you are in $(pwd).
 EOF
 
-bash
+$shell
