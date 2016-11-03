@@ -51,6 +51,8 @@ You will be prompted for a password.
 To make things quick and painless, both a [`Makefile`](Makefile) and an
 [`auth/Makefile`](Makefile) is provided. Type `make run` to do everything. If
 it goes well, you can go to [http://localhost:8080](http://localhost:8080).
+`make build` will just build (both) containers. `make -C auth ineract` will
+drop you into a shell in the auth container with `htpasswd` installed.
 
 ## Client
 
