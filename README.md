@@ -48,7 +48,7 @@ You will be prompted for a password.
 
 ### Build and Run
 
-To make things quick and painless, both a [`Makefile`](Makefile) and
+To make things quick and painless, both a [`Makefile`](Makefile) and an
 [`auth/Makefile`](Makefile) is provided. Type `make run` to do everything. If
 it goes well, you can go to [http://localhost:8080](http://localhost:8080).
 
