@@ -1,4 +1,4 @@
-# PyPI Docker Container
+# Minimal PyPI Docker Infrastructure
 
 A minimal PyPI Docker container on top of an [Alpine
 Linux](https://www.alpinelinux.org/) base image.
